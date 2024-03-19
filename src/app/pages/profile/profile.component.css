@@ -1,0 +1,105 @@
+.main{
+    height: 527px;
+    background-image: url("src\assets\img\img3.jpg");
+    background-size: cover;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container{
+    height: 80%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(231, 214, 158, 0.377);
+    border-radius: 20px;
+}
+    
+    
+.c1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.fotografia{
+    height: 40%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+
+}
+#img{
+    height: 190px;
+    width: 190px;
+    border-radius: 100%;
+    border: dotted 5px black;
+}
+.datos{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h2{
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xx-large;
+    font-weight: bold;
+    color: var(--azulOscuro);
+    margin-bottom: 15px;
+}
+
+h3{
+    background-color: var(--azulOscuro);
+    color:var(--azulClaro);
+    border-radius: 5px;
+    padding:5px;
+    width: 250px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+    text-align: center;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+input{
+    height: 35px;
+    width: 250px;
+    margin:8px;
+    padding: 3px;
+    border-radius:5px;
+    background-color: antiquewhite;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}   
+button{
+    width: 140px;
+    height: 40px;
+    padding: 5px;
+    margin-top: 20px;
+    background-color: var(--azulClaro);
+    border:none;
+    border-radius: 10px;
+    font-family: fantasy;
+    color: black;
+   
+}
+button:hover{
+    background-color: var(--azulMedio);
+}

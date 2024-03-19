@@ -1,0 +1,38 @@
+
+<div class="main">
+    <div class= "container c1">
+            <div class="fotografia">
+                <img id=img src="{{user1.photo}}" alt="">
+            </div>
+            <div class="datos">
+                <h2> {{user1.name}} {{user1.last_name}}</h2>
+                Name:       <input type="text" value="{{user1.name}}"> 
+                Last name:  <input type="text" value="{{user1.last_name}}"> 
+                Email:      <input type="text" value="{{user1.email}}"> 
+         
+            </div>
+        
+    </div>
+    <div class= "container c2">
+        <div class title>
+            <h3>Edit profile</h3>
+        </div>
+        <div class="formulario">
+            <input type="text" #input1
+            placeholder="Name">
+            <input type="text" #input2
+            placeholder="Last name">
+            <input type="text" #input3
+            placeholder="Email">
+            <input type="text" #input4
+            placeholder="Photo url">
+
+            <button (click)=enviar1(input1.value)>Save</button>
+            <button (click)=enviar2(input2)>Save</button>
+            <button (click)=enviar3(input3.value)>Save</button>
+            <button (click)=enviar4(input4.value)>Save</button>
+            
+        </div>
+    </div>
+
+</div>

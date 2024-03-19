@@ -8,6 +8,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormRegisterComponent } from './components/form-register/form-register.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormRegisterComponent } from './components/form-register/form-register.
     HeaderComponent,
     FooterComponent,
     FormRegisterComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

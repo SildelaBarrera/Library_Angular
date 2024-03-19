@@ -20,14 +20,12 @@ form{
 form input{
     height: 40px;
     width: 500px;
-    margin: 5px;
     border: dotted 2px var(--azulMedio);
     background-color:whitesmoke;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: medium;
     font-weight: bold;
-    
-    
+    padding:6px;    
 }
 button{
     width: 140px;
@@ -38,6 +36,7 @@ button{
     border:none;
     border-radius: 10px;
     font-family: fantasy;
+    font-size: medium;
     color: black;
 }
 button:hover{
