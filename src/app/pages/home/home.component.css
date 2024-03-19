@@ -1,0 +1,23 @@
+
+
+.main{
+    height: 527px;
+    background-image: url("src\assets\img\img1.jpg");
+    background-size: cover;
+    background-size: contain;
+    
+}
+.title{
+    height: 100%;
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+}
+
+

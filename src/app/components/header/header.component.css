@@ -1,0 +1,27 @@
+.navbar{
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: fantasy;
+    font-size: medium;
+    text-decoration: none;
+    color: var(--azulMedio);
+}
+a{
+    text-decoration: none;
+    color: var(--azulMedio);
+}
+a:hover{
+    color: var(--rosado); 
+}
+
+h3{
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+}

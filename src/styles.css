@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+:root{
+    --verdeOscuro: rgb(0, 80, 31);
+    --verdeClaro: rgb(92, 255, 119);
+    --marronOscuro: rgb(85, 46, 24);
+    --marronMedio: rgb(167, 119, 56);
+    --marronClaro: rgb(224, 176, 120);
+    --azulMedio:  rgb(77, 103, 133);
+    --azulClaro: rgb(132, 164, 202);
+    --rosado:  rgb(151, 46, 69);
+
+}

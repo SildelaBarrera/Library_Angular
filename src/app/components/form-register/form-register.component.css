@@ -1,0 +1,45 @@
+.formulario{
+    height: 70%;
+    color: var(--azulClaro);
+    display:flex;
+    flex-direction: column; 
+    justify-content: center;
+    text-align: center;
+    font-family: fantasy;
+    font-size: x-large;
+}
+form{
+    height: 70%;
+    display:flex;
+    flex-direction: column; 
+    justify-content:center;   
+    align-items: center;
+    row-gap: 17px;
+    margin-top: 35px;
+}
+form input{
+    height: 40px;
+    width: 500px;
+    margin: 5px;
+    border: dotted 2px var(--azulMedio);
+    background-color:whitesmoke;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    
+    
+}
+button{
+    width: 140px;
+    height: 40px;
+    padding: 5px;
+    margin-top: 20px;
+    background-color: var(--azulClaro);
+    border:none;
+    border-radius: 10px;
+    font-family: fantasy;
+    color: black;
+}
+button:hover{
+    background-color: var(--azulMedio);
+}

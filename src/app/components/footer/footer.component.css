@@ -1,0 +1,20 @@
+.footer{
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;  
+    font-family: fantasy;
+    font-size: small;
+    text-decoration: initial;
+
+}
+.foot{
+    text-decoration: none;
+    color: var(--azulMedio);
+}
+.foot:hover{
+        color: var(--azulClaro);    
+}
