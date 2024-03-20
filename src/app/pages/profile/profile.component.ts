@@ -13,25 +13,19 @@ export class ProfileComponent {
 
   constructor(){
 
-    this.user1 = new User("Adriana", "Causin", "adri2002@hotmail.com", "https://images.pexels.com/photos/16852356/pexels-photo-16852356/free-photo-of-mujer-puerta-libro-lector.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    
+    this.user1 = new User("Adriana", "Causin", "adri2002@hotmail.com", "https://images.pexels.com/photos/16852356/pexels-photo-16852356/free-photo-of-mujer-puerta-libro-lector.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); 
   }
 
-  enviar1(nameNuevo:string){
-    this.user1.name = nameNuevo;
-  }
-  enviar2(lastNameNuevo:HTMLInputElement){
-      this.user1.last_name = lastNameNuevo.value; 
-  }  
+  enviar(userNuevoName:string, userNuevoApe:string, userNuevoEma: string, userNuevoPho: string){
 
-  enviar3(emailNuevo:string){
-    this.user1.email = emailNuevo; 
-  }
 
-  enviar4(photoNueva:string){
-    this.user1.photo = photoNueva; 
+    this.user1.name = userNuevoName;
+    this.user1.last_name = userNuevoApe;
+    this.user1.email = userNuevoEma;
+    this.user1.photo = userNuevoPho;
+  
+    console.log(this.user1);
   }
-
- 
+  
   }
 
