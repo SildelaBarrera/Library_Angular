@@ -16,15 +16,14 @@ export class ProfileComponent {
     this.user1 = new User("Adriana", "Causin", "adri2002@hotmail.com", "https://images.pexels.com/photos/16852356/pexels-photo-16852356/free-photo-of-mujer-puerta-libro-lector.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); 
   }
 
-  enviar(userNuevoName:string, userNuevoApe:string, userNuevoEma: string, userNuevoPho: string){
+  enviar(userNuevoName:string, userNuevoLastName:string, userNuevoEmail: string, userNuevoPhoto: string){
 
 
     this.user1.name = userNuevoName;
-    this.user1.last_name = userNuevoApe;
-    this.user1.email = userNuevoEma;
-    this.user1.photo = userNuevoPho;
-  
-    console.log(this.user1);
+    this.user1.last_name = userNuevoLastName;
+    this.user1.email = userNuevoEmail;
+    this.user1.photo = userNuevoPhoto;
+
   }
   
   }
