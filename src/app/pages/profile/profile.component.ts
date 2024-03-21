@@ -9,7 +9,7 @@ import { User } from 'src/app/models/user';
 export class ProfileComponent {
 
   public user1: User;
-  public fotografia: string;
+ 
 
   constructor(){
 
@@ -25,6 +25,10 @@ export class ProfileComponent {
     this.user1.photo = userNuevoPhoto;
 
   }
+<<<<<<< HEAD
   
+=======
+ 
+>>>>>>> dia3
   }
 

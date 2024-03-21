@@ -1,5 +1,5 @@
 .navbar{
-    height: 40px;
+    height: 25hv;
     width: 100%;
     background-color: black;
     display: flex;
@@ -23,5 +23,6 @@ h3{
     font-family: "Gloria Hallelujah", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: large;
+    font-size: medium;
+    
 }
