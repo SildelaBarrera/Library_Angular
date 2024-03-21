@@ -9,6 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormRegisterComponent } from './components/form-register/form-register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { BooksComponent } from './pages/books/books.component';
+import { RefBookPipe } from './pipes/ref-book.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
     FooterComponent,
     FormRegisterComponent,
     ProfileComponent,
+    BooksComponent,
+    RefBookPipe,
   ],
   imports: [
     BrowserModule,

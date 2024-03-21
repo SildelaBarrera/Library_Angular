@@ -1,0 +1,145 @@
+.container{
+    height: 50hv;
+    width: 100%;
+    background-image: url("src\assets\img\img2.jpg");
+    background-size: cover;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+.cards{
+    height: 50%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card{
+    height: 450px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    background-color: rgba(252, 185, 84, 0.575);
+    border-radius: 15px;
+    margin:20px;
+}
+p1{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    padding:10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#img{
+    height: 170px;
+    width: 120px;
+    border: dotted 4px var(--marronOscuro);
+    margin: 10px;
+}
+h3{
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+    text-align: center;
+    color:var(--marronOscuro);
+    font-weight: bold;    
+}
+p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p2{ 
+    font-style: oblique;
+    color:(var(--marronOscuro));
+    font-size: medium;
+}
+.comprar{
+    height: 90px;
+    width: 250px;
+    background-color:  rgba(252, 184, 84, 0.76);
+    border-radius: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+button{
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    margin: 10px;
+    background-color: var(--verdeClaro);
+    border:none;
+    border-radius: 10px;
+    font-family: fantasy;
+    font-size: medium;
+    color: var(--verdeOscuro);
+}
+button:hover{
+    background-color: var(--verdeMedio);
+}
+.azul {
+    background-color: var(--azulClaro);
+    color: var(--azulOscuro);
+}
+.azul:hover{
+    background-color: var(--azulMedio);
+}
+.formulario{
+    height: 500px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35pt;
+    color: var(--rosadoClaro);
+    margin: 50px;   
+}
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: solid red 2px;    
+}
+input{
+    height: 35px;
+    width: 200px;
+    padding: 8px;
+    margin: 5px;
+    border-radius:5px;
+    background-color: antiquewhite;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}  
+.guardar{
+    width: 140px;
+    height: 60px;
+    padding: 5px;
+    margin: 10px;
+    background-color: var(--rosado);
+    border:none;
+    border-radius: 10px;
+    font-family: fantasy;
+    font-size: large;
+    color: var(--rosadoClaro);
+} 
+.guardar:hover{
+    background-color: var(--rosadoClaro); 
+    color: var(--rosado);
+}
+
+

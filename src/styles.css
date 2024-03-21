@@ -8,7 +8,8 @@
 }
 :root{
     --verdeOscuro: rgb(0, 80, 31);
-    --verdeClaro: rgb(92, 255, 119);
+    --verdeMedio:rgb(52, 136, 66);
+    --verdeClaro: rgb(124, 214, 124);
     --marronOscuro: rgb(85, 46, 24);
     --marronMedio: rgb(167, 119, 56);
     --marronClaro: rgb(224, 176, 120);

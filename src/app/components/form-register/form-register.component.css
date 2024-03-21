@@ -1,5 +1,5 @@
 .formulario{
-    height: 70%;
+    height: 560px;
     color: var(--azulClaro);
     display:flex;
     flex-direction: column; 
@@ -9,7 +9,7 @@
     font-size: x-large;
 }
 form{
-    height: 70%;
+    height: 80%;
     display:flex;
     flex-direction: column; 
     justify-content:center;   

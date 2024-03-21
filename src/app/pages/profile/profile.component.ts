@@ -9,7 +9,7 @@ import { User } from 'src/app/models/user';
 export class ProfileComponent {
 
   public user1: User;
-  public fotografia: string;
+ 
 
   constructor(){
 
@@ -17,21 +17,15 @@ export class ProfileComponent {
     
   }
 
-  enviar1(nameNuevo:string){
-    this.user1.name = nameNuevo;
-  }
-  enviar2(lastNameNuevo:HTMLInputElement){
-      this.user1.last_name = lastNameNuevo.value; 
-  }  
+  enviar(userNuevoName:string, userNuevoLastName:string, userNuevoEmail: string, userNuevoPhoto: string){
 
-  enviar3(emailNuevo:string){
-    this.user1.email = emailNuevo; 
-  }
 
-  enviar4(photoNueva:string){
-    this.user1.photo = photoNueva; 
-  }
+    this.user1.name = userNuevoName;
+    this.user1.last_name = userNuevoLastName;
+    this.user1.email = userNuevoEmail;
+    this.user1.photo = userNuevoPhoto;
 
+  }
  
   }
 
