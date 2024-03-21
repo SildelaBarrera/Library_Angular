@@ -18,12 +18,17 @@ export class BooksComponent {
     this.books = [
       new Book("Harry Poter and the Philosopher's Stone", "Soft cover", "J. K. Rowling",10.50,"https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_568,c_scale/jackets/9781526626585.jpg", 15484894, 28),
       new Book("El nombre del viento", "Hard cover", "Patrick Rothfuss",22,"https://imagessl8.casadellibro.com/a/l/s7/48/9788401352348.webp", 165184, 16),
+<<<<<<< HEAD
       new Book("Caraval", "Soft cover", "Stephanie Garber",15,"https://tienda.sophosenlinea.com/imagenes/9786077/978607748296.GIF", 131548)
+=======
+      new Book("Caraval", "Soft cover", "Stephanie Garber",15,"https://tienda.sophosenlinea.com/imagenes/9786077/978607748296.GIF", 131548, 9)
+>>>>>>> dia3
     ]
   }
 
   
   enviar(titleNew:string, typeNew:string,authorNew:string,
+<<<<<<< HEAD
            priceNew:number, photoNew:string, id_bookNew:number, id_userNew:number){
    
            
@@ -31,6 +36,18 @@ export class BooksComponent {
             
     this.books.push(bookNew);
   
+=======
+           priceNew:number, photoNew:string, id_bookNew:number, id_userNew:string){
+   
+           
+    let bookNew = new Book(titleNew, typeNew, authorNew, priceNew, photoNew, id_bookNew, parseInt(id_userNew) )
+    
+      if(id_userNew === ""){
+        bookNew = new Book(titleNew, typeNew, authorNew, priceNew, photoNew, id_bookNew )
+    }
+
+    this.books.push(bookNew)
+>>>>>>> dia3
 
   }
 }

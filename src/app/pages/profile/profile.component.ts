@@ -26,8 +26,11 @@ export class ProfileComponent {
 
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
+=======
+>>>>>>> dia3
  
 >>>>>>> dia3
   }
