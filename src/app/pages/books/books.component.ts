@@ -28,15 +28,6 @@ export class BooksComponent {
 
   
   enviar(titleNew:string, typeNew:string,authorNew:string,
-<<<<<<< HEAD
-           priceNew:number, photoNew:string, id_bookNew:number, id_userNew:number){
-   
-           
-    let bookNew = new Book(titleNew, typeNew, authorNew, priceNew, photoNew, id_bookNew, id_userNew) 
-            
-    this.books.push(bookNew);
-  
-=======
            priceNew:number, photoNew:string, id_bookNew:number, id_userNew:string){
    
            
@@ -47,7 +38,6 @@ export class BooksComponent {
     }
 
     this.books.push(bookNew)
->>>>>>> dia3
 
   }
 }
