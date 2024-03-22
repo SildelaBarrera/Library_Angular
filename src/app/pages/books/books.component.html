@@ -1,24 +1,14 @@
 
 <div class="container">
+
     <div class="cards">
-        <div *ngIf="books.length === 0"> 
-            <p1>No hay ningún libro disponible</p1>
+        <div *ngFor = "let book of books">  
+            <app-card [bookPadre] = "book" (remove) = "removeBook($event)"></app-card>
         </div>
-        <ng-container *ngFor ="let book of books; let i = index; let par= even;">
-            <div class="card">
-                <h3>{{book.title}}</h3> 
-                <img id="img" src="{{book.photo}}" alt="">
-                <p>{{book.author}}  ☀  {{book.type}}</p>
-                <p>{{book.id_book | refBook}} </p>
-                <p2>Id User: {{book.id_user}} </p2>
-                <div class="comprar">
-                    <p3> {{book.price}} € </p3>
-                    <button [ngClass]="{azul:par}" onclick="comprar()">Buy</button>          
-                
-                </div>
-            </div>
-        </ng-container>        
-    </div>  
+
+    </div>    
+        
+
     <div class="formulario">ADD YOUR BOOK
             <form action="" >
                 <input type="text" #input1
@@ -34,7 +24,7 @@
                 <input type="text" #input6
                 placeholder="Id Book">
                 <input type="text" #input7
-                placeholder="Id User">
+                placeholder="Id User (number)">
             </form>
             <div class="boton">
                 <button class="guardar" type=button (click)="enviar(input1.value, input2.value, 

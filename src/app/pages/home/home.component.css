@@ -1,6 +1,6 @@
 
 .main{
-    height: 50hv;
+    height: 80vh;
     width: 100wh;
     background-image: url("src\assets\img\img1.jpg");
     background-size: cover;
@@ -8,7 +8,7 @@
     
 }
 .title{
-    height: 560px;
+    height: 400px;
     font-family: "Gloria Hallelujah", cursive;
     font-weight: 400;
     font-style: normal;

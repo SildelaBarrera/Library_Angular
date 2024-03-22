@@ -1,14 +1,16 @@
 .main{
-    height: 50hv;
+    height: 80vh;
     background-image: url("src\assets\img\img3.jpg");
     background-size: cover;
     background-size: contain;
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
+   
+      
 }
 .container{
-    height: 520px;
+    height: 75%;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -16,8 +18,6 @@
     align-items: center;
     background-color: rgba(231, 214, 158, 0.377);
     border-radius: 20px;
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
       
 .c1{

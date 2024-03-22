@@ -25,13 +25,6 @@ export class ProfileComponent {
     this.user1.photo = userNuevoPhoto;
 
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  
-=======
-=======
->>>>>>> dia3
- 
->>>>>>> dia3
+
   }
 

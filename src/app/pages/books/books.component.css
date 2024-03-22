@@ -1,22 +1,29 @@
 .container{
-    height: 50hv;
+    height: 50hvh;
     width: 100%;
     background-image: url("src\assets\img\img2.jpg");
     background-size: cover;
     background-size: contain;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;  
+    overflow: auto;
 }
 .cards{
-    height: 50%;
+    height: fit-content;
     width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+}
+p1{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    padding:10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .card{
     height: 450px;
@@ -30,13 +37,7 @@
     border-radius: 15px;
     margin:20px;
 }
-p1{
-    background-color: white;
-    border: 1px solid black;
-    color: black;
-    padding:10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+
 #img{
     height: 170px;
     width: 120px;
