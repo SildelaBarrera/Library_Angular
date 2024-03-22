@@ -1,10 +1,9 @@
 .formulario{
-    height: 560px;
+    height: 80%;
     color: var(--azulClaro);
     display:flex;
     flex-direction: column; 
-    justify-content: center;
-    text-align: center;
+    align-items:center; 
     font-family: fantasy;
     font-size: x-large;
 }
@@ -15,7 +14,7 @@ form{
     justify-content:center;   
     align-items: center;
     row-gap: 17px;
-    margin-top: 35px;
+    margin-top: 20px;
 }
 form input{
     height: 40px;
