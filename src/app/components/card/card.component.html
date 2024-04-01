@@ -9,9 +9,8 @@
         <img id="img" src="{{bookPadre.photo}}" alt="">
         <p>{{bookPadre.author}}  ☀  {{bookPadre.type}}</p>
         <p>{{bookPadre.id_book | refBook}} </p>
-        <p>Id User: {{bookPadre.id_user}} </p>
-        <p>{{bookPadre.price}} € </p>
-        <button>Buy</button>  
+        <p id="price">{{bookPadre.price}} € </p>
+        <button [ngClass]="{azul:parPadre}" onclick="comprar()">Buy</button> 
     </div>
 
     

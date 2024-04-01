@@ -8,16 +8,17 @@
 }
 :root{
     --verdeOscuro: rgb(0, 80, 31);
-    --verdeMedio:rgb(52, 136, 66);
-    --verdeClaro: rgb(124, 214, 124);
-    --marronOscuro: rgb(85, 46, 24);
+    --verdeMedio:rgb(86, 165, 99);
+    --verdeClaro: rgb(139, 190, 139);
+    --marronOscuro: rgb(82, 58, 44);
     --marronMedio: rgb(167, 119, 56);
-    --marronClaro: rgb(224, 176, 120);
+    --marronClaro: rgb(211, 159, 96);
     --azulMedio:  rgb(77, 103, 133);
-    --azulOscuro: rgb(37, 52, 70);
+    --azulOscuro: rgb(54, 76, 104);
     --azulClaro: rgb(132, 164, 202);
-    --rosado:  rgb(151, 46, 69);
+    --rosado:  rgb(150, 52, 84);
     --rosadoClaro:rgb(207, 180, 186);
     --mostaza:rgb(255, 200, 50);
-
+    --lila:rgba(192, 192, 233, 0.61);
+    --lilaOscuro: rgba(99, 80, 117, 0.966);
 }

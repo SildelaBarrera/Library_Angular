@@ -1,0 +1,26 @@
+<div class=container>
+    <h2>UPDATE YOUR BOOK</h2>
+    <div class="formulario">
+        <form class="inputs" action="" >
+            <input type="text" #input1
+            placeholder="Title">
+            <input type="text" #input2
+            placeholder="Soft cover/Hard cover">
+            <input type="text" #input3
+            placeholder="Author">
+            <input type="text" #input4
+            placeholder="Price">
+            <input type="text" #input5
+            placeholder="Photo url">
+            <input type="text" #input6
+            placeholder="Id Book">
+            
+        </form>
+        <div class="boton">
+            <button class="guardar" type=button (click)="editar(input1.value, input2.value, 
+            input3.value, input4.value, 
+            input5.value, input6.value)">Save</button>
+        </div>
+    </div> 
+</div>
+

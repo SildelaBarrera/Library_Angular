@@ -18,13 +18,7 @@
     align-items: center;
     flex-wrap: wrap;
 }
-p1{
-    background-color: white;
-    border: 1px solid black;
-    color: black;
-    padding:10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+
 .card{
     height: 450px;
     width: 270px;
@@ -74,73 +68,39 @@ p2{
     justify-content: space-evenly;
     align-items: center;
 }
-button{
-    width: 100px;
-    height: 40px;
+.buscador{
+    width: 30%;
+    height: 60px;
+    background-color: rgba(171, 207, 241, 0.459);
+    border-radius: 4px;
+    border: dotted white 2px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+input{
+    width: 130px;
+    height: 30px;
+    border-radius: 5px;
+    background-color:whitesmoke;
+    font-size: small;
     padding: 5px;
+}
+button{
+    width: 70px;
+    height: 30px;
+    padding: 3px;
     margin: 10px;
-    background-color: var(--verdeClaro);
+    background-color: var(--azulClaro);
     border:none;
     border-radius: 10px;
     font-family: fantasy;
     font-size: medium;
-    color: var(--verdeOscuro);
-}
-button:hover{
-    background-color: var(--verdeMedio);
-}
-.azul {
-    background-color: var(--azulClaro);
     color: var(--azulOscuro);
 }
-.azul:hover{
+button:hover{
     background-color: var(--azulMedio);
 }
-.formulario{
-    height: 500px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: "Gloria Hallelujah", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 35pt;
-    color: var(--rosadoClaro);
-    margin: 50px;   
-}
-.form{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: solid red 2px;    
-}
-input{
-    height: 35px;
-    width: 200px;
-    padding: 8px;
-    margin: 5px;
-    border-radius:5px;
-    background-color: antiquewhite;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}  
-.guardar{
-    width: 140px;
-    height: 60px;
-    padding: 5px;
-    margin: 10px;
-    background-color: var(--rosado);
-    border:none;
-    border-radius: 10px;
-    font-family: fantasy;
-    font-size: large;
-    color: var(--rosadoClaro);
-} 
-.guardar:hover{
-    background-color: var(--rosadoClaro); 
-    color: var(--rosado);
-}
-
 
