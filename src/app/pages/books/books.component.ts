@@ -24,8 +24,12 @@ export class BooksComponent {
     if(this.book = this.bookService.getOne(id_book)){
       return this.book;
     }
+    if(id_book.toString() == ""){
+      return this.bookService.getAll()
+    }
     else{
       alert("The book has not been found.")
     }
+    
   }
 }
