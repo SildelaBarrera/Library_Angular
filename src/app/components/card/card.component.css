@@ -3,11 +3,11 @@
     width: 270px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: end;
-    background-color: rgba(221, 181, 120, 0.671);
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(207, 174, 125, 0.671);
     border-radius: 15px;
-    margin:20px;
+    margin:15px;
 }
 .cierre{
     height: 40px;
@@ -64,12 +64,12 @@ p{
     font-weight: bold;
     font-size: medium;
     border: dotted var(--marronOscuro) 1px;
-    padding: 3px;
+    padding: 2px;
 }
 .comprar{
-    height: 90px;
+    height: 70px;
     width: 250px;
-    background-color:  rgba(252, 184, 84, 0.76);
+    background-color:  rgba(240, 189, 113, 0.76);
     border-radius: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
@@ -82,9 +82,9 @@ p{
 
 button{
     width: 100px;
-    height: 40px;
+    height: 30px;
     padding: 5px;
-    margin: 10px;
+    margin: 5px;
     background-color: var(--verdeClaro);
     border:none;
     border-radius: 10px;

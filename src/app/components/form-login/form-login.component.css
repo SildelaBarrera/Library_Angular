@@ -41,6 +41,7 @@ button{
 button:hover{
     background-color: var(--azulMedio);
 }
+
 #aviso{
     color: rgb(128, 0, 0);
     background-color: rgba(247, 141, 141, 0.712);

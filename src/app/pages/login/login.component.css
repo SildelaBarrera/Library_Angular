@@ -1,0 +1,10 @@
+.main{
+    height: 80vh;
+    background-image: url("src\assets\img\img2.jpg");
+    background-size: cover;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

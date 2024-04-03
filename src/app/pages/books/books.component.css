@@ -1,4 +1,4 @@
-.container{
+.contenedor{
     height: 50hvh;
     width: 100%;
     background-image: url("src\assets\img\img2.jpg");
@@ -24,12 +24,12 @@
     width: 270px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 6px;
     background-color: rgba(252, 185, 84, 0.575);
     border-radius: 15px;
-    margin:20px;
+    margin:15px;
 }
 
 #img{

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { empty } from 'rxjs';
 import { Book } from 'src/app/models/book';
 import { BooksService } from 'src/app/shared/books.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-books',
@@ -12,7 +13,8 @@ import { BooksService } from 'src/app/shared/books.service';
 
 export class BooksComponent {
   public book: Book;
-  constructor(public bookService: BooksService) {}
+  constructor(public bookService: BooksService,
+              public toastr: ToastrService) {}
 
   public removeBook(noBook: Book) {
 
@@ -28,7 +30,7 @@ export class BooksComponent {
       return this.bookService.getAll()
     }
     else{
-      alert("The book has not been found.")
+      this.toastr.error("The book has not been found.")
     }
     
   }

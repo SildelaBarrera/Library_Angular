@@ -1,4 +1,4 @@
-.container{
+.contenedor{
     height: 50hvh;
     width: 100%;
     background-image: url("src\assets\img\img3.jpg");
@@ -24,7 +24,7 @@ h2{
 }
 
 .formulario{
-    height: 420px;
+    height: 430px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -43,7 +43,7 @@ input{
     padding: 8px;
     margin: 8px;
     border-radius:5px;
-    background-color: antiquewhite;
+    background-color: rgb(206, 212, 230);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }  
 .guardar{
