@@ -1,0 +1,25 @@
+
+    <div class=formulario>Log in
+        <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+            
+            <div class="form-group">
+                <input name="email" type="email" class="form-control" [(ngModel)]="user.email" 
+                placeholder="e-mail" #emailId="ngModel" [ngClass]="{ 'is-invalid':(emailId.dirty || emailId.touched) && emailId.invalid}" email required>
+                <div id="aviso" *ngIf="(emailId.dirty || emailId.touched) && emailId.invalid" class="invalid-feedback">
+                    <p *ngIf="emailId.errors.required">Email is required</p>
+                    <p *ngIf="emailId.errors.email">Wrong email</p>
+                </div>
+            </div>
+            <div class="form-group">  
+                <input name="password" type="password" class="form-control" [(ngModel)]="user.password" 
+                placeholder="Password" #passwordId="ngModel" [ngClass] = "{ 'is-invalid':(passwordId.dirty || passwordId.touched) && passwordId.invalid}" minlength="6">
+                <div id="aviso" *ngIf= "(passwordId.dirty || passwordId.touched) && passwordId.invalid" class="invalid-feedback">
+                    <p *ngIf="passwordId.errors.required">Password is required</p>
+                    <p *ngIf="passwordId.errors.minlength">Wrong Password</p>
+                </div>
+            </div>  
+            
+            <button class="btn btn-secondary btn-block" [disabled] = "userForm.invalid">Log In</button>   
+            
+        </form>
+    </div>
