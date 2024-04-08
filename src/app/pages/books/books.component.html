@@ -12,7 +12,7 @@
         </div> 
         <ng-template #Libreria>
         
-            <div *ngFor = "let book of bookService.getAll(); let i = index; let par= even;">  
+            <div *ngFor = "let book of library; let i = index; let par= even;">  
                 <app-card [bookPadre] = "book" [parPadre] = "par" (remove) = "removeBook($event)"></app-card>
             </div>
         </ng-template>

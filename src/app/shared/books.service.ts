@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Book } from 'src/app/models/book';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,77 +9,43 @@ import { Book } from 'src/app/models/book';
 export class BooksService {
 
   private books: Book[];
+  private url = "http://localhost:4000/book"
 
+  constructor(private http: HttpClient) {}
 
-  constructor() {
-    this.books = [
-      new Book("Harry Potter and the Philosopher's Stone", "Soft cover", "J. K. Rowling", 10.50, "https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_568,c_scale/jackets/9781526626585.jpg", 1),
-      new Book("El nombre del viento", "Hard cover", "Patrick Rothfuss", 22, "https://imagessl8.casadellibro.com/a/l/s7/48/9788401352348.webp", 2),
-      new Book("Caraval", "Soft cover", "Stephanie Garber", 15, "https://tienda.sophosenlinea.com/imagenes/9786077/978607748296.GIF", 3),
-      new Book("Harry Potter and the Chamber of Secrets", "Soft cover", "J. K. Rowling", 11, "https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_568,c_scale/jackets/9781526637888.jpg", 4)
-    ]
+  getAll():Observable<Object> {
+    return this.http.get(this.url)
   }
-
-  getAll(): Book[] {
-    return (this.books)
-  }
-  getOne(id_book:number):Book {
-    
-    let searchedBook: Book;
-  
-    if(searchedBook = this.books.find((aBook) => aBook.id_book == id_book)){
-      console.log(searchedBook);
-    }
-    
-    return searchedBook;    
-      
+  getOne(id_book:number):Observable<Object> {
+    let urlNueva = this.url+"?id_book="+id_book;
+    return this.http.get(urlNueva)   
   }
 
   add(titleNew: string, typeNew: string, authorNew: string,
-    priceNew: number, photoNew: string, id_bookNew: number): void {
+    priceNew: number, photoNew: string, id_bookNew: number):Observable<Object> {
 
-    let newBook = new Book(titleNew, typeNew, authorNew,
-      priceNew, photoNew, id_bookNew);
-    this.books.push(newBook);
+    let newBook = new Book(titleNew, typeNew, authorNew, priceNew, photoNew, id_bookNew);  
+    return this.http.post(this.url, newBook)
   }
 
-  edit(titleEdited: string, typeEdited: string, authorEdited: string,
-    priceEdited: number, photoEdited: string, id_bookEdited: number): boolean {
+  edit(title: string, type: string, author: string,
+    price: number, photo: string, id_book: number): Observable<Object> {
+    
+    let editedBook= {title, type, author, price, photo, id_book}
+    return this.http.put(this.url, editedBook)
+  }
 
-    for (let i = 0; i < this.books.length; i++){
-      if(this.books[i].id_book == id_bookEdited){
-        if(titleEdited != ""){
-          this.books[i].title = titleEdited;
-        }
-        if(typeEdited != ""){
-          this.books[i].type = typeEdited;
-        }
-        if(authorEdited != ""){
-          this.books[i].author = authorEdited;
-        }
-        if(priceEdited != null){
-          this.books[i].price = priceEdited;
-        }
-        if(photoEdited != ""){
-          this.books[i].photo = photoEdited;
-        }
-        if(id_bookEdited != null){
-          this.books[i].id_book = id_bookEdited;
-        }
-        return true;
-      }
+  delete(id_book: Number): Observable<Object> {
+  let options= {
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body:{
+      'id_book': id_book
     }
-    return false;
   }
 
-  delete(noBook: Book): Book[] {
-
-    let booksFinale = this.books.filter(book => book.id_book != noBook.id_book);
-
-    this.books = booksFinale;
-    console.log(booksFinale);
-    return (booksFinale);
-
+  return this.http.delete(this.url,options);
   }
 }
 

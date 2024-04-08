@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { BooksService } from 'src/app/shared/books.service';
 import { ToastrService } from 'ngx-toastr';
+import { Respuesta } from 'src/app/models/respuesta';
 
 @Component({
   selector: 'app-update-book',
@@ -14,18 +15,18 @@ export class UpdateBookComponent {
               public toastr: ToastrService) {}
 
 
-public editar(titleEdited: string, typeEdited: string, authorEdited: string, 
-            priceEdited: number, photoEdited: string, id_bookEdited: number){
-    
-    if(this.bookService.edit(titleEdited, typeEdited, authorEdited, 
-      priceEdited, photoEdited, id_bookEdited)){
-        this.toastr.success("This book has been edited successfully."); 
-    }
-    else{
-      this.toastr.warning("The book has not been found.")
-    }
-  }
+public editar(title: string, type: string, author: string, 
+            price: number, photo: string, id_book: number){
 
+    this.bookService.edit(title, type, author, price, photo, id_book)
+    .subscribe ((resp: Respuesta) => {
+      if(resp.error){
+        this.toastr.warning("The book has not been found.")
+      }else{
+        this.toastr.success("This book has been edited successfully."); 
+      }
+    })
+  }
 }
 
 
