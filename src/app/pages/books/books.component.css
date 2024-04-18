@@ -1,5 +1,5 @@
 .contenedor{
-    height: 50hvh;
+    height: 80vh;
     width: 100%;
     background-image: url("src\assets\img\img2.jpg");
     background-size: cover;
@@ -47,7 +47,7 @@ h3{
     color:var(--marronOscuro);
     font-weight: bold;    
 }
-p{
+p1{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 p2{ 

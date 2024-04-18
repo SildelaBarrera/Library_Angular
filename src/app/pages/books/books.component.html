@@ -6,15 +6,16 @@
         <button type="button" (click)="buscar(input1.value)">Find</button>
     </div>
     <div class="cards">
+       
         <div *ngIf = "this.book; else Libreria">
             <app-card [bookPadre] = "book" (remove) = "removeBook($event)"></app-card>
 
         </div> 
         <ng-template #Libreria>
-        
             <div *ngFor = "let book of library; let i = index; let par= even;">  
-                <app-card [bookPadre] = "book" [parPadre] = "par" (remove) = "removeBook($event)"></app-card>
+                <app-card [bookPadre] = "book" [parPadre] = "par" (remove) = "removeBook($event)"></app-card>    
             </div>
+            
         </ng-template>
 
     </div> 

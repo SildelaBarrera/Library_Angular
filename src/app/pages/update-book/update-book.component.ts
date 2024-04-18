@@ -3,6 +3,9 @@ import { Book } from 'src/app/models/book';
 import { BooksService } from 'src/app/shared/books.service';
 import { ToastrService } from 'ngx-toastr';
 import { Respuesta } from 'src/app/models/respuesta';
+import { User } from 'src/app/models/user';
+import { UsersService } from '../../shared/users.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-update-book',
@@ -11,23 +14,39 @@ import { Respuesta } from 'src/app/models/respuesta';
 })
 export class UpdateBookComponent {
 
-  constructor(public bookService: BooksService,
-              public toastr: ToastrService) {}
+  private user: User;
+  constructor(public userService: UsersService,
+              public bookService: BooksService,
+              public toastr: ToastrService,
+              private router: Router){}
 
+  ngOnInit(): void {
+    this.user = this.userService.userLogueado
+    if (this.user == undefined){
+      this.router.navigate(['/', 'home'])
+      .then(nav => {
+        console.log(nav); 
+      }, err => {
+          console.log(err);
+      });
+    }
+  }            
+  public editar(title: string, type: string, author: string, 
+            price: number, photo: string, id_book: number ){
+    
+    this.user = this.userService.userLogueado
 
-public editar(title: string, type: string, author: string, 
-            price: number, photo: string, id_book: number){
-
-    this.bookService.edit(title, type, author, price, photo, id_book)
-    .subscribe ((resp: Respuesta) => {
-      if(resp.error){
-        this.toastr.warning("The book has not been found.")
-      }else{
-        this.toastr.success("This book has been edited successfully."); 
-      }
-    })
+    this.bookService.edit(id_book, this.user.id_user, title, type, author, price, photo)
+      .subscribe ((resp: Respuesta) => {
+        console.log(resp)
+        if(resp.error){
+          this.toastr.warning(resp.message)
+        }else{
+          this.toastr.success(resp.message); 
+        }
+      })
+    }
   }
-}
 
 
 

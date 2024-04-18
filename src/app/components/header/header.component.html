@@ -1,13 +1,14 @@
 
 <div class="navbar">
     <h3>M y F a n L i b</h3>
-    <a routerLink= "/home" routerLinkActive="activo">HOME</a>
-    <a routerLink="/books" routerLinkActive="activo">BOOKS</a>
-    <a routerLink="/addBook" routerLinkActive="activo"> ADD BOOK</a>
-    <a routerLink= "/updateBook" routerLinkActive="activo">UPDATE BOOK</a>
-    <a routerLink="/login" routerLinkActive="activo">LOGIN</a>
-    <a routerLink= "/profile" routerLinkActive="activo">PROFILE</a>
-    <a routerLink= "/register" routerLinkActive="activo">SIGN IN</a>
-    
+        <a *ngIf = "!this.userService.logueado" routerLink= "/home" routerLinkActive="activo">HOME</a>
+        <a *ngIf = "!this.userService.logueado" routerLink= "/register" routerLinkActive="activo">REGISTER</a>
+        <a *ngIf = "!this.userService.logueado" routerLink="/login" routerLinkActive="activo">LOGIN</a>
+
+        <a *ngIf = "this.userService.logueado" routerLink="/books" routerLinkActive="activo">BOOKS</a>
+        <a *ngIf = "this.userService.logueado" routerLink="/addBook" routerLinkActive="activo"> ADD BOOK</a>
+        <a *ngIf = "this.userService.logueado" routerLink= "/updateBook" routerLinkActive="activo">UPDATE BOOK</a>
+        <a *ngIf = "this.userService.logueado" routerLink= "/profile" routerLinkActive="activo">PROFILE</a>    
+       
 </div>
 

@@ -3,35 +3,38 @@ import { Book } from 'src/app/models/book';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class BooksService {
 
   private books: Book[];
-  private url = "http://localhost:4000/book"
+  private url:string = "http://localhost:4000/book"
 
   constructor(private http: HttpClient) {}
-
-  getAll():Observable<Object> {
-    return this.http.get(this.url)
+  
+  getAll(id_user: number):Observable<Object> {
+    let urlNueva = this.url+"?id_user="+id_user;
+    return this.http.get(urlNueva)
   }
-  getOne(id_book:number):Observable<Object> {
-    let urlNueva = this.url+"?id_book="+id_book;
+  getOne(id_user:number, id_book:number):Observable<Object> {
+    let urlNueva = this.url+"?id_user="+id_user+"&id_book="+id_book;
     return this.http.get(urlNueva)   
   }
 
-  add(titleNew: string, typeNew: string, authorNew: string,
-    priceNew: number, photoNew: string, id_bookNew: number):Observable<Object> {
+  add(title: string, type: string, author: string,
+    price: number, photo: string, id_user:number):Observable<Object> {
 
-    let newBook = new Book(titleNew, typeNew, authorNew, priceNew, photoNew, id_bookNew);  
+    let newBook = new Book(id_user,title, type, author, price, photo, );  
     return this.http.post(this.url, newBook)
   }
 
-  edit(title: string, type: string, author: string,
-    price: number, photo: string, id_book: number): Observable<Object> {
+  edit(id_book: number, id_user:number, title: string, type: string, author: string,
+    price: number, photo: string): Observable<Object> {
     
-    let editedBook= {title, type, author, price, photo, id_book}
+    let editedBook= {id_book, id_user, title, type, author, price, photo}
+    console.log(editedBook)
     return this.http.put(this.url, editedBook)
   }
 
@@ -44,7 +47,6 @@ export class BooksService {
       'id_book': id_book
     }
   }
-
   return this.http.delete(this.url,options);
   }
 }

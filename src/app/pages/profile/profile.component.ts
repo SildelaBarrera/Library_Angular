@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { User } from 'src/app/models/user';
+import { UsersService } from '../../shared/users.service';
+import { ToastrService } from 'ngx-toastr';
+import { Respuesta } from 'src/app/models/respuesta';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -8,20 +12,54 @@ import { User } from 'src/app/models/user';
 })
 export class ProfileComponent {
 
-  public user1: User;
+  public user: User;
  
-  constructor(){
+  constructor(public userService: UsersService,
+              public toastr: ToastrService,
+              private router: Router){
+    
+    this.user = this.userService.userLogueado
+  }
 
-    this.user1 = new User("Adriana", "Causin", "adri2002@hotmail.com", "https://images.pexels.com/photos/16852356/pexels-photo-16852356/free-photo-of-mujer-puerta-libro-lector.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); 
+  ngOnInit(): void {
+    if (this.userService.logueado){
+        this.user = this.userService.userLogueado         
+    }
+    this.user = this.userService.userLogueado
+    if (this.user == undefined){
+      this.router.navigate(['/', 'home'])
+        .then(nav => {
+        console.log(nav); 
+      }, err => {
+        console.log(err);
+      });
+    }
   }
 
   enviar(userNuevoName:string, userNuevoLastName:string, userNuevoEmail: string, userNuevoPhoto: string){
 
-    this.user1.name = userNuevoName;
-    this.user1.last_name = userNuevoLastName;
-    this.user1.email = userNuevoEmail;
-    this.user1.photo = userNuevoPhoto;
+    this.userService.edit(userNuevoName, userNuevoLastName, userNuevoEmail, userNuevoPhoto, 
+      this.user.id_user).subscribe((resp:Respuesta) => {
+        
+        if(resp.error == true){
+          this.toastr.warning(resp.message)
+        }
+        else{
+          this.toastr.success(resp.message)
+          if (userNuevoName != ""){
+            this.user.name = userNuevoName;
+          }
+          if (userNuevoLastName != ""){
+            this.user.last_name = userNuevoLastName;
+          }
+          if (userNuevoEmail != ""){
+            this.user.email = userNuevoEmail;
+          }
+          if (userNuevoPhoto != ""){
+            this.user.photo = userNuevoPhoto;
+          }
+        }
+      })
   }
-
-  }
+}
 

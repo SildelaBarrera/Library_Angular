@@ -2,21 +2,21 @@
 <div class=formulario>Sign in
     <form [formGroup] = "myForm">
         <div class="form-group">
-            <input class="form-group" type="text" formControlName="name"
+            <input class="form-group" type="text" formControlName="name" #input1
             placeholder="Name"
             [ngClass]="{'is-invalid': (myForm.get('name').dirty || myForm.get('name').touched)
             && !myForm.get('name').valid}">
             <div id="aviso" *ngIf="!myForm.get('name').valid" class="invalid-feedback">Name is required</div>
         </div>
         <div class="form-group">
-            <input class="form-group" type="text" formControlName="lastName"
+            <input class="form-group" type="text" formControlName="lastName" #input2
             placeholder="Last name"
             [ngClass]="{'is-invalid': (myForm.get('lastName').dirty || myForm.get('lastName').touched)
             && !myForm.get('lastName').valid}">
             <div id="aviso" *ngIf="!myForm.get('lastName').valid" class="invalid-feedback">Last name is required</div>
         </div>
         <div class="form-group">
-            <input class="form-group" type="email" formControlName="email"
+            <input class="form-group" type="email" formControlName="email" #input3
             placeholder="e-mail"
             [ngClass]="{'is-invalid': (myForm.get('email').dirty || myForm.get('email').touched)
             && !myForm.get('email').valid}">
@@ -27,7 +27,15 @@
             </div>
         </div>
         <div class="form-group">
-            <input class="form-group" type="password" formControlName="password"
+            <input class="form-group" type="text" formControlName="photo" #input4
+            placeholder="Photo"
+            [ngClass]="{'is-invalid': (myForm.get('photo').dirty || myForm.get('photo').touched)
+            && !myForm.get('photo').valid}">
+            <div id="aviso" *ngIf="!myForm.get('photo').valid" class="invalid-feedback">Photo is required</div>
+        </div>
+        
+        <div class="form-group">
+            <input class="form-group" type="password" formControlName="password" #input5
             placeholder="Password"
             [ngClass]="{'is-invalid': (myForm.get('password').dirty || myForm.get('password').touched)
             && !myForm.get('password').valid}">
@@ -38,7 +46,7 @@
             </div>
         </div>
         <div class="form-group">
-            <input class="form-group" type="text" formControlName="password2"
+            <input class="form-group" type="text" formControlName="password2" #input6
             placeholder="Repit Password"
             [ngClass]="{'is-invalid': (myForm.get('password2').dirty || myForm.get('password2').touched)
             && !myForm.get('password2').valid}">
@@ -49,7 +57,9 @@
             </div>
         </div>
         <div class="form-group">
-            <button class="btn btn-secondary btn-block" (click) ="register()" [disabled] ="myForm.invalid">Save</button>   
+            <button class="btn btn-secondary btn-block" (click) ="register(input1.value, 
+            input2.value, input3.value, input4.value, 
+            input5.value, input6.value)" [disabled] ="myForm.invalid">Save</button>   
         </div>
     </form>
 </div>

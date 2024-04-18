@@ -4,8 +4,11 @@
         <form class="inputs" action="" >
             <input type="text" #input1
             placeholder="Title">
-            <input type="text" #input2
-            placeholder="Soft cover/Hard cover">
+            <label class="label" for="Cover type">Cover type</label>
+                <select #input2 name="Cover">
+                    <option value="Soft cover">Soft cover</option>
+                    <option value="Hard cover">Hard cover</option>
+                </select> 
             <input type="text" #input3
             placeholder="Author">
             <input type="text" #input4
@@ -17,9 +20,9 @@
             
         </form>
         <div class="boton">
-            <button class="guardar" type=button (click)="editar(input1.value, input2.value, 
-            input3.value, input4.value, 
-            input5.value, input6.value)">Save</button>
+            <button class="guardar" type=button (click)="editar(input1.value, 
+            input2.value, input3.value, 
+            input4.value, input5.value, input6.value)">Save</button>
         </div>
     </div> 
 </div>

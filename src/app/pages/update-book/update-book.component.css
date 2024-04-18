@@ -46,6 +46,16 @@ input{
     background-color: rgb(231, 198, 154);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }  
+.label{
+    height: 40px;
+    width: 220px;
+    padding: 8px;
+    margin: 8px;
+    border-radius:5px;
+    color: rgb(121, 118, 118);
+    background-color: rgba(233, 186, 125, 0.712);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 .guardar{
     width: 120px;
     height: 50px;
