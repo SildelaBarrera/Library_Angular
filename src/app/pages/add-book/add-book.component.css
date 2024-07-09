@@ -1,5 +1,5 @@
 .contenedor{
-    height: 50hvh;
+    height: 80vh;
     width: 100%;
     background-image: url("src\assets\img\img3.jpg");
     background-size: cover;
@@ -46,14 +46,14 @@ input{
     background-color: rgb(206, 212, 230);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }  
-.label{
+select{
     height: 40px;
     width: 220px;
     padding: 8px;
     margin: 8px;
     border-radius:5px;
-    color: rgb(71, 64, 64);
-    background-color: rgba(206, 212, 230, 0.452);
+    color: rgb(138, 130, 130);
+    background-color: rgb(206, 212, 230);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .guardar{

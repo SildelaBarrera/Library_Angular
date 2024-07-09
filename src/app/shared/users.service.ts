@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 
 export class UsersService {
 
-    private url:string = "http://localhost:4000/"
+    private url:string = "http://localhost:3000/"
     public logueado:boolean;
     public user:User;
     public userLogueado:User;
@@ -30,7 +30,7 @@ export class UsersService {
   edit(name:string, lastName:string,  email:string, photo:string, id_user: number){
     let urlEdit = this.url + "user"
     let editedUser = {name, lastName, email, photo, id_user}
-   console.log(editedUser);
+    console.log(editedUser);
     return this.http.put(urlEdit, editedUser)
   }
   login(email:string, password:string){

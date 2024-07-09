@@ -74,7 +74,6 @@ export class BooksComponent {
           this.toastr.warning("There are no books")
         }
       })
-    });
-    
+    }); 
   }
 }

@@ -22,9 +22,9 @@ export class ProfileComponent {
   }
 
   ngOnInit(): void {
-    if (this.userService.logueado){
-        this.user = this.userService.userLogueado         
-    }
+    // if (this.userService.logueado){
+    //     this.user = this.userService.userLogueado         
+    // }
     this.user = this.userService.userLogueado
     if (this.user == undefined){
       this.router.navigate(['/', 'home'])

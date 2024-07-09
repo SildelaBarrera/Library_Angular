@@ -9,7 +9,7 @@ import { UpdateBookComponent } from './pages/update-book/update-book.component';
 import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
-  {path:'', pathMatch: 'full', redirectTo: '/home' },
+  {path:"", redirectTo: "/home", pathMatch: 'full' },
   {path: "home", component: HomeComponent},
   {path: "books", component: BooksComponent},
   {path:"addBook", component: AddBookComponent},
