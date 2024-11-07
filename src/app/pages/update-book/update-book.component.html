@@ -6,24 +6,36 @@
             placeholder="Title">
             <!-- <label class="label" for="Cover type">Cover type</label> -->
                 <select #input2 name="Cover">
-                    <option diseabled selected>Choose the cover</option>
+                    <option value="">Cover</option>
                     <option value="Soft cover">Soft cover</option>
                     <option value="Hard cover">Hard cover</option>
                 </select> 
             <input type="text" #input3
             placeholder="Author">
-            <input type="text" #input4
-            placeholder="Price">
+            <select #input4 name="BookRead">
+                <option value="">Already read?</option>
+                <option value="Book read">Book read</option>
+                <option value="Book to read">To read</option>
+            </select> 
             <input type="text" #input5
             placeholder="Photo url">
             <input type="text" #input6
-            placeholder="Id Book">
+            placeholder="Reference">
+            <select #input7 name="Rating">
+                <option value="">Rating</option>
+                <option value="1">★</option>
+                <option value="2">★★</option>
+                <option value="3">★★★</option>
+                <option value="4">★★★★</option>
+                <option value="5">★★★★★</option>
+            </select> 
+            
             
         </form>
         <div class="boton">
             <button class="guardar" type=button (click)="editar(input1.value, 
             input2.value, input3.value, 
-            input4.value, input5.value, input6.value)">Save</button>
+            input4.value, input5.value, input6.value, input7.value)">Save</button>
         </div>
     </div> 
 </div>

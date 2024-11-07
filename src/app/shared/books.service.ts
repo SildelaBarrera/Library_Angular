@@ -23,17 +23,17 @@ export class BooksService {
     return this.http.get(urlNueva)   
   }
 
-  add(title: string, type: string, author: string,
-    price: number, photo: string, id_user:number):Observable<Object> {
+  add(title: string, bookRead: string, type: string, author: string,
+     photo: string, rating: number, id_user:number):Observable<Object> {
 
-    let newBook = new Book(id_user,title, type, author, price, photo, );  
+    let newBook = new Book(id_user,title, bookRead, type, author,  photo, rating);  
     return this.http.post(this.url, newBook)
   }
 
   edit(id_book: number, id_user:number, title: string, type: string, author: string,
-    price: number, photo: string): Observable<Object> {
+    bookRead: string, photo: string, rating: number): Observable<Object> {
     
-    let editedBook= {id_book, id_user, title, type, author, price, photo}
+    let editedBook= {id_book, id_user, title, type, author, bookRead, photo, rating}
     console.log(editedBook)
     return this.http.put(this.url, editedBook)
   }

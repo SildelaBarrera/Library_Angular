@@ -6,24 +6,37 @@
             
             <input type="text" #input1
             placeholder="Title">
-            <select #input2 name="Cover">
-                <option diseabled selected>Choose the cover</option>
+            <select #input2 name="BookRead">
+                <option diseabled selected>¿Already read?</option>
+                <option value="Book read">Book read</option>
+                <option value="Book to read">To read</option>
+            </select>
+
+            <select #input3 name="Cover">
+                <option diseabled selected>Cover</option>
                 <option value="Soft cover">Soft cover</option>
                 <option value="Hard cover">Hard cover</option>
             </select>
             
-            <input type="text" #input3
-            placeholder="Author">
             <input type="text" #input4
-            placeholder="Price">
+            placeholder="Author">
+            
             <input type="text" #input5
-            placeholder="Photo url">      
+            placeholder="Photo url">  
+            <select #input6 name="Rating">
+                <option diseabled selected>Rating</option>
+                <option value="1">★</option>
+                <option value="2">★★</option>
+                <option value="3">★★★</option>
+                <option value="4">★★★★</option>
+                <option value="5">★★★★★</option>
+            </select>    
 
         </form>
         <div class="boton">
             <button type="button" class="btn btn-primary" id="liveToastBtn" class="guardar" (click)="enviar(input1.value, 
             input2.value, input3.value, input4.value, 
-            input5.value)">Save   
+            input5.value, input6.value)">Save   
             </button>    
         </div>
         

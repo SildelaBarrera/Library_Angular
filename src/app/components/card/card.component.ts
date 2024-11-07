@@ -9,7 +9,6 @@ import { Book } from 'src/app/models/book';
 export class CardComponent {
 
 @Input() bookPadre: Book;
-@Input() parPadre : Boolean;
 @Output() remove = new EventEmitter<Book>();
   
   constructor(){}

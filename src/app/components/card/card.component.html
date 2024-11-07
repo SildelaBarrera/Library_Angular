@@ -1,17 +1,19 @@
 
 <div class="card">
-    
-    <div class="cierre"> 
-        <button id="equis" type=" button" (click)="removeCard()"> x </button>
-    </div>
+        <div class= "header">
+            <h4 id="read">{{bookPadre.bookRead}} </h4>
+        </div>
         <div class="texto">
-        <h3>{{bookPadre.title}}</h3> 
-        <img id="img" src="{{bookPadre.photo}}" alt="">
-        <p>{{bookPadre.author}}  ☀  {{bookPadre.type}}</p>
-        <p>{{bookPadre.id_book | refBook}} </p>
-        <p id="price">{{bookPadre.price}} € </p>
-        <button [ngClass]="{azul:parPadre}" onclick="comprar()">Buy</button> 
-    </div>
+            <h2>{{bookPadre.title}}</h2> 
+            <img id="img" src="{{bookPadre.photo}}" alt="">
+            <p id="author">  {{bookPadre.author}} </p>   
+            <p>{{bookPadre.type}} ☀ {{bookPadre.id_book | refBook}}</p>
+            <div><app-stars [rating] = "bookPadre.rating"></app-stars></div>
+        </div>
+        <div class="footer">     
+            <button id="delete" type=" button" (click)="removeCard()"> 🗑️ </button>
+        </div>
+
 
     
 </div>

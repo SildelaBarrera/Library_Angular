@@ -32,13 +32,13 @@ export class AddBookComponent {
       });
     }
   }
-  public enviar(title:string, type:string, author:string,
-    price:number, photo:string){
+  public enviar(title:string, bookRead:string, type:string, author:string,
+     photo:string, rating: number){
 
       this.user = this.userService.userLogueado
 
-      this.bookService.add(title, type, author, 
-          price, photo, this.user.id_user).subscribe((resp: Respuesta) => {
+      this.bookService.add(title, bookRead, type, author, 
+           photo, rating, this.user.id_user).subscribe((resp: Respuesta) => {
             if (resp.error){
               this.toastr.error('This book already exist!');
             }else{

@@ -32,11 +32,11 @@ export class UpdateBookComponent {
     }
   }            
   public editar(title: string, type: string, author: string, 
-            price: number, photo: string, id_book: number ){
+            bookRead: string, photo: string, id_book: number, rating: number ){
     
     this.user = this.userService.userLogueado
 
-    this.bookService.edit(id_book, this.user.id_user, title, type, author, price, photo)
+    this.bookService.edit(id_book, this.user.id_user, title, type, author, bookRead, photo, rating)
       .subscribe ((resp: Respuesta) => {
         console.log(resp)
         if(resp.error){
