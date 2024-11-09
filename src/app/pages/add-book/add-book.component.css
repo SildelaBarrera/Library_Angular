@@ -72,3 +72,18 @@ select{
     background-color: var(--azulMedio); 
     color: var(--azulOscuro);
 }
+#aviso{
+    width: 210px;
+    color: rgb(128, 0, 0);
+    background-color: rgba(247, 141, 141, 0.603);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

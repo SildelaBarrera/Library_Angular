@@ -17,8 +17,9 @@ export class FormRegisterComponent{
   constructor(private formBuilder: FormBuilder,
               public userService:UsersService,
               public toastr: ToastrService){
-    this.buildForm();
-  }
+
+              this.buildForm();
+              }
 
 private buildForm(){
 

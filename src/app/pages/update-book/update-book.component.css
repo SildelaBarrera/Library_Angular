@@ -69,6 +69,15 @@ select{
     color: var(--marronOscuro);
 } 
 .guardar:hover{
-    background-color: var(--marronOscuro); 
+    background-color: rgb(133, 102, 56); 
     color: var(--marronClaro);
+}
+#aviso{
+    width: 220px;
+    color: rgb(128, 0, 0);
+    background-color: rgba(247, 141, 141, 0.603);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    padding-left: 10px;
 }

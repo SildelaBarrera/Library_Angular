@@ -6,6 +6,7 @@ import { Respuesta } from 'src/app/models/respuesta';
 import { User } from 'src/app/models/user';
 import { UsersService } from '../../shared/users.service';
 import { Router } from '@angular/router';
+import { FormGroup, FormBuilder, Validators} from '@angular/forms'
 
 @Component({
   selector: 'app-update-book',
@@ -15,10 +16,16 @@ import { Router } from '@angular/router';
 export class UpdateBookComponent {
 
   private user: User;
+  public myForm: FormGroup;
+
   constructor(public userService: UsersService,
               public bookService: BooksService,
               public toastr: ToastrService,
-              private router: Router){}
+              private router: Router,
+              public formBuilder: FormBuilder){
+
+                this.buildForm()
+              }
 
   ngOnInit(): void {
     this.user = this.userService.userLogueado
@@ -30,7 +37,15 @@ export class UpdateBookComponent {
           console.log(err);
       });
     }
-  }            
+  }  
+  
+  private buildForm(){
+
+    this.myForm = this.formBuilder.group({
+      id_book: [, Validators.required]
+      }
+    )
+  }
   public editar(title: string, type: string, author: string, 
             bookRead: string, photo: string, id_book: number, rating: number ){
     

@@ -1,17 +1,25 @@
 <div class=contenedor>
     <h2>UPDATE YOUR BOOK</h2>
     <div class="formulario">
-        <form class="inputs" action="" >
+        <form [formGroup] = "myForm" class="inputs" action=""  >
+            
+            <div class="form-group">    
+                <input class="form-group" type="text" #input6 formControlName="id_book"
+                placeholder="Reference"
+                [ngClass]="{'is-invalid': (myForm.get('id_book').dirty || myForm.get('id_book').touched)
+                && !myForm.get('id_book').valid}">
+                <div id="aviso" *ngIf="!myForm.get('id_book').valid" class="invalid-feedback">Reference is required</div>
+            </div>
             <input type="text" #input1
             placeholder="Title">
-            <!-- <label class="label" for="Cover type">Cover type</label> -->
-                <select #input2 name="Cover">
-                    <option value="">Cover</option>
-                    <option value="Soft cover">Soft cover</option>
-                    <option value="Hard cover">Hard cover</option>
-                </select> 
             <input type="text" #input3
             placeholder="Author">
+            <select #input2 name="Cover">
+                <option value="">Cover</option>
+                <option value="Soft cover">Soft cover</option>
+                <option value="Hard cover">Hard cover</option>
+            </select> 
+            
             <select #input4 name="BookRead">
                 <option value="">Already read?</option>
                 <option value="Book read">Book read</option>
@@ -19,8 +27,7 @@
             </select> 
             <input type="text" #input5
             placeholder="Photo url">
-            <input type="text" #input6
-            placeholder="Reference">
+            
             <select #input7 name="Rating">
                 <option value="">Rating</option>
                 <option value="1">★</option>
@@ -33,9 +40,9 @@
             
         </form>
         <div class="boton">
-            <button class="guardar" type=button (click)="editar(input1.value, 
+            <button class="guardar btn btn-secondary btn-block" type=button (click)="editar(input1.value, 
             input2.value, input3.value, 
-            input4.value, input5.value, input6.value, input7.value)">Save</button>
+            input4.value, input5.value, input6.value, input7.value)" [disabled] ="myForm.invalid">Save</button>
         </div>
     </div> 
 </div>

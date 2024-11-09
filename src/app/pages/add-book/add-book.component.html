@@ -2,29 +2,37 @@
 
     <h2>ADD YOUR BOOK</h2>
     <div class="formulario">
-        <form class="inputs" action="" >
             
-            <input type="text" #input1
-            placeholder="Title">
-            <select #input2 name="BookRead">
-                <option diseabled selected>¿Already read?</option>
-                <option value="Book read">Book read</option>
-                <option value="Book to read">To read</option>
-            </select>
-
+        <form [formGroup] = "myForm" class="inputs" action="" >
+            <div class="form-group">    
+                    <input class="form-group" type="text" #input1 formControlName="title"
+                    placeholder="Title"
+                    [ngClass]="{'is-invalid': (myForm.get('title').dirty || myForm.get('title').touched)
+                    && !myForm.get('title').valid}">
+                    <div id="aviso" *ngIf="!myForm.get('title').valid" class="invalid-feedback">Title is required</div>
+            </div>
+            <div class="form-group">    
+                <input class="form-group" type="text" #input4 formControlName="author"
+                placeholder="Author"
+                [ngClass]="{'is-invalid': (myForm.get('author').dirty || myForm.get('author').touched)
+                && !myForm.get('author').valid}">
+                <div id="aviso" *ngIf="!myForm.get('author').valid" class="invalid-feedback">Author is required</div>
+            </div>
+        
             <select #input3 name="Cover">
-                <option diseabled selected>Cover</option>
+                <option value="">Cover</option>
                 <option value="Soft cover">Soft cover</option>
                 <option value="Hard cover">Hard cover</option>
             </select>
-            
-            <input type="text" #input4
-            placeholder="Author">
-            
+            <select #input2 name="BookRead">
+                <option value="">Already read?</option>
+                <option value="Book read">Book read</option>
+                <option value="Book to read">To read</option>
+            </select>
             <input type="text" #input5
             placeholder="Photo url">  
             <select #input6 name="Rating">
-                <option diseabled selected>Rating</option>
+                <option value="">Rating</option>
                 <option value="1">★</option>
                 <option value="2">★★</option>
                 <option value="3">★★★</option>
@@ -34,9 +42,9 @@
 
         </form>
         <div class="boton">
-            <button type="button" class="btn btn-primary" id="liveToastBtn" class="guardar" (click)="enviar(input1.value, 
+            <button type=button class="guardar btn btn-secondary btn-block" (click)="enviar(input1.value, 
             input2.value, input3.value, input4.value, 
-            input5.value, input6.value)">Save   
+            input5.value, input6.value)" [disabled] ="myForm.invalid">Save   
             </button>    
         </div>
         

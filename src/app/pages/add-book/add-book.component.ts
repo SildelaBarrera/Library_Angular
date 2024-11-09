@@ -5,8 +5,8 @@ import { ToastrService } from 'ngx-toastr';
 import { Respuesta } from 'src/app/models/respuesta';
 import { User } from 'src/app/models/user';
 import { UsersService } from '../../shared/users.service';
-import { LoginComponent } from '../login/login.component';
 import { Router } from '@angular/router';
+import { FormGroup, FormBuilder, Validators} from '@angular/forms'
 
 @Component({
   selector: 'app-add-book',
@@ -16,10 +16,16 @@ import { Router } from '@angular/router';
 
 export class AddBookComponent {
   private user: User;
+  public myForm: FormGroup;
+
   constructor(public userService: UsersService,
               public bookService: BooksService,
               public toastr: ToastrService,
-              private router: Router){}
+              private router: Router,
+              public formBuilder: FormBuilder){
+              
+              this.buildForm()
+              }
 
   ngOnInit(): void {
     this.user = this.userService.userLogueado
@@ -32,6 +38,15 @@ export class AddBookComponent {
       });
     }
   }
+
+  private buildForm(){
+
+    this.myForm = this.formBuilder.group({
+      title: [, Validators.required],
+      author: [, Validators.required]
+      }
+    )
+  }
   public enviar(title:string, bookRead:string, type:string, author:string,
      photo:string, rating: number){
 
@@ -40,7 +55,7 @@ export class AddBookComponent {
       this.bookService.add(title, bookRead, type, author, 
            photo, rating, this.user.id_user).subscribe((resp: Respuesta) => {
             if (resp.error){
-              this.toastr.error('This book already exist!');
+              this.toastr.error('This book already exist');
             }else{
               this.toastr.success(resp.message);
             }

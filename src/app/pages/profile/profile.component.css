@@ -5,9 +5,7 @@
     background-size: contain;
     display: flex;
     justify-content: center;
-    align-items: center;
-   
-      
+    align-items: center;      
 }
 .container{
     height: 80%;
@@ -18,12 +16,11 @@
     align-items: center;
     background-color: rgba(231, 214, 158, 0.377);
     border-radius: 20px;
-}
-      
+    padding: 30px;
+}     
 .c1{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 .fotografia{
@@ -33,19 +30,19 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding:10px;
-    padding-bottom: 40px;
     text-align: center;
 }
 #img{
     height: 180px;
     width: 250px;
-    border-radius: 20%;
+    border-radius: 20px;
     border: dotted 3px var(--azulOscuro);
 }
 .datos{
     height: 80%;
     width: 60%;
+    height: 200px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,7 +57,6 @@
     background-color: rgb(216, 186, 146);
     border: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
 }
 h2{
     font-family: "Gloria Hallelujah", cursive;
@@ -70,29 +66,42 @@ h2{
     font-weight: bold;
     color: var(--azulOscuro);
     margin-bottom: 15px;
+    background-color: rgba(88, 157, 223, 0.705);
+    border-radius: 10px;
+    padding: 4px;
 }
 h3{
-    background-color: var(--azulOscuro);
-    color:var(--azulClaro);
-    border-radius: 5px;
-    padding:5px;
-    width: 250px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: medium;
+    
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xx-large;
+    font-weight: bold;
+    color: var(--azulOscuro);
+    margin-bottom: 15px;
     text-align: center;
+    background-color: rgba(88, 157, 223, 0.705);
+    border-radius: 10px;
+    padding: 4px;
 }
 .formulario{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;   
+    margin-top: 20px;  
+}
+.inputs{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 input{
     height: 35px;
     width: 250px;
     margin:8px;
-    padding-left: 5px;
+    padding-left: 10px;
     border-radius: 8px;
     background-color: antiquewhite;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -106,7 +115,7 @@ button{
     border:none;
     border-radius: 10px;
     font-family: fantasy;
-    color: black;   
+    color: var(--azulOscuro);   
 }
 button:hover{
     background-color: var(--azulMedio);
